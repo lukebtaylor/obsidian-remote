@@ -1,3 +1,9 @@
+# credit and attribution
+
+All credit goes to https://github.com/sytone/obsidian-remote
+
+This fork is only for personal maintenance updates. :)
+
 # obsidian-remote
 
 This docker image allows you to run [obsidian](https://obsidian.md/) in docker as a container and access it via your web browser.
@@ -32,7 +38,7 @@ docker run --rm -it `
   -v D:/ob/vaults:/vaults `
   -v D:/ob/config:/config `
   -p 8080:8080 `
-  ghcr.io/sytone/obsidian-remote:latest
+  ghcr.io/lukebtaylor/obsidian-remote:latest
 ```
 
 To run it as a daemon in the background.
@@ -42,7 +48,7 @@ docker run -d `
   -v D:/ob/vaults:/vaults `
   -v D:/ob/config:/config `
   -p 8080:8080 `
-  ghcr.io/sytone/obsidian-remote:latest
+  ghcr.io/lukebtaylor/obsidian-remote:latest
 ```
 
 The ARM container is now avaliable, will look to make this simpler in the future. The ARM imange is on the docker hub and not the github container registry. 
@@ -52,7 +58,7 @@ docker run -d `
   -v D:/ob/vaults:/vaults `
   -v D:/ob/config:/config `
   -p 8080:8080 `
-  sytone/obsidian-remote:latest
+  lukebtaylor/obsidian-remote:latest
 ```
 
 ### Ports
@@ -91,7 +97,7 @@ docker run -d `
 ```YAML
 services:
   obsidian:
-    image: 'ghcr.io/sytone/obsidian-remote:latest'
+    image: 'ghcr.io/lukebtaylor/obsidian-remote:latest'
     container_name: obsidian-remote
     restart: unless-stopped
     ports:
@@ -124,7 +130,7 @@ docker run -d `
   -v D:/ob/config:/config `
   -p 8080:8080 `
   -e DOCKER_MODS=linuxserver/mods:universal-git `
-  ghcr.io/sytone/obsidian-remote:latest
+  ghcr.io/lukebtaylor/obsidian-remote:latest
 ```
 
 ## Reloading Obsidan in the Browser
@@ -144,7 +150,7 @@ docker run --rm -it `
   -e PUID=1000 `
   -e PGID=1000 `
   -p 8080:8080 `
-  ghcr.io/sytone/obsidian-remote:latest
+  ghcr.io/lukebtaylor/obsidian-remote:latest
 ```
 
 Or, if you use docker-compose, add them to the environment: section:
@@ -226,7 +232,7 @@ If you install obsidian-remote in Docker, you can proxy it through [Nginx Proxy 
 ```yaml
 services:
   obsidian:
-    image: 'ghcr.io/sytone/obsidian-remote:latest'
+    image: 'ghcr.io/lukebtaylor/obsidian-remote:latest'
     container_name: obsidian-remote
     restart: unless-stopped
     ports:
